@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+  <html>
+	<head>
+		<title>Calculator</title>
+	</head>
+	
+	<body>
+		<script src="js/calculatorScript.js"></script>
+				<input id="txtResult" type="text" readonly="readonly" /><br />
+				<input id="txtInput" type="text" /><br />
+					<button id="btn7">7</button>
+					<button id="btn8">8</button>
+					<button id="btn9">9</button><br />
+					<button id="btn4">4</button>
+					<button id="btn5">5</button>
+					<button id="btn6">6</button><br />
+					<button id="btn1">1</button>
+					<button id="btn2">2</button>
+					<button id="btn3">3</button><br />
+					<button id="btnClear">C</button>
+					<button id="btn0">0</button>
+					<button id="btnClearEntry">CE</button><br />
+					<button id="btnPlus">+</button>
+					<button id="btnMinus">-</button>
+					<button id="btnResult">=</button>
+			<style>
+				body{
+					background-color: hsl(255,100%,50%); 
+				}
+				
+				#calculator{
+					border:solid;
+					background-color:hsl(255,100%,60%);
+					width:500px;
+					height:500px;
+					margin-left:auto;
+					margin-right:auto;
+					text-align:center;
+					padding:10px;
+					}
+				input{
+					width:85%;
+					height:7%;
+					text-align:right;
+					padding:10px;
+					border:inset;
+				}
+				button{
+					background-color:hsl(255, 50%, 80%);
+					width:25%;
+					height:10%;
+					border:outset;
+					}
+				button:hover{
+					background-color:hsl(255, 50%, 90%); 
+				}
+				button:active{
+					border:inset;
+					border-width: thick;
+					border-color: hsl(255, 100%, 100%);
+					background-color: hsl(255, 50%, 50%);
+				}
+				input, button{
+					font-family: Arial;
+					font-size:24px;
+					border-width:thick;
+					border-color:hsl(255, 100%, 100%);
+					margin:5px;
+				}
+				[readonly]{
+					background-color: hsl(255, 50%, 80%); 
+				}
+			</style>
+		
+		
+		
+	</body>
+  </html>
