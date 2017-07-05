@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-  <html>
-	<head>
-		<title></title>
-	</head>
-	<body>
-		<script>
-			var txtInput;
-			var txtResult;
-			var operation;
+var txtInput;
+var txtResult;
+var operation;
 
-			function initialize(){
-				txtInput = $('#txtInput');
-				txtResult = $('#txtResult');
+function initialize(){
+
+
+txtInput = $('#txtInput');
+txtResult = $('#txtResult');
 				
-				$('#btn0').on('click',numberClick);
+	$('#btn0').on('click',numberClick);
 				$('#btn1').on('click',numberClick);
 				$('#btn2').on('click',numberClick);
 				$('#btn3').on('click',numberClick);
@@ -36,7 +31,7 @@
 						else{
 						txtInput.val(txtInput.val() + $(this).text());
 						}
-					
+					}
 					
 					function plusClick() {
 						txtResult.val(Number(txtInput.val()));
@@ -73,11 +68,6 @@
 						}
 						clearEntry();
 					}
-					
-					
-					
 				initialize();
-
-		</script>
-	</body>
-  </html>
+					
+		

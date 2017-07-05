@@ -1,0 +1,30 @@
+.menu{
+	overflow: hidden;
+    background-color: grey;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+}
+
+.menu a{
+	float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/*body {
+    background-position: center;
+    background-size: cover;
+    background-image: url("photos/bigimg.jpg");
+	background-repeat: no-repeat;
+    min-height: 75%;
+}*/
+.box{
+	width:100%;
+	background-color:yellow;
+	padding:50px;
+	margin:5px;
+}
