@@ -6,6 +6,7 @@
 			<script src="js/jquery-3.2.1.js"></script>
 			<script src="js/javas.js"></script>
 	</head>
+		
 	<body>
 		<div class="background" id="background">
 			<div class="modalrow">
@@ -15,46 +16,129 @@
 		</div>
 	
 		<header>
-		
 		</header>
-		<nav>
+		<nav class="row">
 			<div class="menu">
-			<div>
-			<a href="">Naujienos</a>
-			<a href="">Istorija</a>
-			<a href="">Renginiai</a>
-			<a href="">Apie mus</a>
-			<a href="">Galerija</a>
-			<a href="">Kontaktai</a>
+				<a href=""><img src="css/photos/home-icon.png" style="width:90%"></a>
+				<a href="">Naujienos</a>
+				<a href="">Istorija</a>
+				<a href="">Renginiai</a>
+				<a href="">Apie mus</a>
+				<a href="">Galerija</a>
+				<a href="">Kontaktai</a>
 			</div>
 		</nav>
 		<section class="box">
 			<div class="slideshow-container">
-           <div class="mySlides fade">
-           <div class="numbertext">1 / 3</div>
-    <img src="img1.jpg" style="width:100%">
-    <div class="text">Caption Text</div>
-  </div>
+			
+				<div class="slidePhoto">
+					<div class="numberPhoto">1 / 3</div>
+						<img src="css/photos/photo1.jpg" style="width:100%">
+				</div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="img2.jpg" style="width:100%">
-    <div class="text">Caption Two</div>
-  </div>
+			<div class="slidePhoto">
+				<div class="numberPhoto">2 / 3</div>
+					<img src="css/photos/photo2.jpg" style="width:100%">
+			</div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="img3.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
-  </div>
+			<div class="slidePhoto">
+				<div class="numberPhoto">3 / 3</div>
+					<img src="css/photos/photo3.jpg" style="width:100%">
+			</div>
+			
+
+			<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+				<span class="dot" onclick="currentSlide(3)"></span> 
+			</div>
 
 		
 		</section>
+		
+		
 		<section class="box">fdghxf</section>
-		<section class="box">fthjxfghxfjgfx</section>
+		
+		
+		<section class="calendar">
+			<div class="month"> 
+				<ul>
+					<li class="prev">&#10094;</li>
+					<li class="next">&#10095;</li>
+					<li>
+						Liepa<br>
+					<span style="font-size:18px text-align:center">2017</span>
+					</li>
+				</ul>
+			</div>
+
+				<ul class="weekdays">
+					<li>Pr</li>
+					<li>A</li>
+					<li>T</li>
+					<li>K</li>
+					<li>P</li>
+					<li>Š</li>
+					<li>S</li>
+				</ul>
+
+				<ul class="days"> 
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li><span class="active">7</span></li>
+					<li>8</li>
+					<li>9</li>
+					<li>10</li>
+					<li>11</li>
+					<li>12</li>
+					<li>13</li>
+					<li>14</li>
+					<li>15</li>
+					<li>16</li>
+					<li>17</li>
+					<li>18</li>
+					<li>19</li>
+					<li>20</li>
+					<li>21</li>
+					<li>22</li>
+					<li>23</li>
+					<li>24</li>
+					<li>25</li>
+					<li>26</li>
+					<li>27</li>
+					<li>28</li>
+					<li>29</li>
+					<li>30</li>
+					<li>31</li>
+				</ul>
+		
+		
+		
+		</section>
 		<section class="box">xfgnjxgfjdjdg</section>
 		
 		<footer>
-			<div class="box">Kontaktai</div></footer>
+			<div class="box">Kontaktai
+				<p><strong>Lenktynininkas Vytautas Venskūnas </strong></P>
+					<p>VŠĮ „Kaukaras“ </p>
+						<p>Telefonas: +370 687 19722 </p>
+						<p> * * * </p>
+						<p><strong>Projektų vadovas: Mantas Kryžanauskas</strong></p>
+				<p>El. paštas: mantaskryzanauskas@gmail.com</p>
+				<p>Telefonas: +370 676 60100</p>
+				<p>Adresas: Kairėnų g. 48</p> 
+				<p>LT-10239 Vilnius</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2302.4598614476477!2d25.395159215891972!3d54.75430098029813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd977726e985d9%3A0x5c691a2760d3e110!2sKair%C4%97n%C5%B3+g.+48%2C+Vilnius+10239!5e0!3m2!1slt!2slt!4v1499275492567"
+				width="1200" height="300" frameborder="8" style="border:3" allowfullscreen></iframe>
+			<h2><strong>Bendraukime</strong></h2>       
+				<a href="#" class="fa fa-facebook"></a>
+				<a href="#" class="fa fa-twitter"></a>
+				<a href="#" class="fa fa-instagram"></a>
+		</div>
+		</footer>
 	</body>
   </html>

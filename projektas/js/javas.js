@@ -1,19 +1,31 @@
+/*var slide=document.getElementById("slidePhoto");
+var slideArray=["photo1.jpg","photo2.jpg","photo3.jpg"];
+var slideIndex=0;
+
+function changePhoto(){
+	slideIndex++;
+	if(slideIndex>=slideArray.length){
+		slideIndex=0;
+	}
+}
+
+var intervalHandle = setInterval(changePhoto,2000);
+
+changePhoto();*/
 $(document).ready(function(){
-	$(".articleimg").on("click", function(){
-		var bigImgPath=$(this).attr("src").replace('_small','');
-		
-		$("#modal").append("<img id='imageToRemove' src='"+bigImgPath+"'/>");
-		$(".background").css("visibility","visible");
-		$(".background").animate({"opacity":1},400)
-	});
-	
-	$(".background").on("click", function(){
-		
-		$(".background").animate({"opacity":0},400, function(){
-			$(".background").css("visibility","hidden");
-			$("#imageToRemove").remove();
-			
-		})
-		
-	});
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+		var i;
+		var x = $(".numberPhoto");
+		console.log(x.length);
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+		myIndex++;
+		if (myIndex > x.length) {myIndex = 1}
+		x[myIndex-1].style.display = "block";
+		setTimeout(carousel, 3000);
+	}
 });
