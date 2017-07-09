@@ -18,7 +18,7 @@ changePhoto();*/
 
 	function carousel() {
 		var i;
-		var x = $(".numberPhoto");
+		var x = $(".slidePhoto");
 		console.log(x.length);
 		for (i = 0; i < x.length; i++) {
 			x[i].style.display = "none";
@@ -28,26 +28,33 @@ changePhoto();*/
 		x[myIndex-1].style.display = "block";
 		setTimeout(carousel, 3000);
 	}
-});
-*/
-$(document).ready(function(){
-var slideIndex = 0;
-showSlides();
+});*/
 
-function showSlides() {
-    var i;
-    var slides = $(".numberPhoto");
-    var dots = $(".dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+$(document).ready(function(){
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = $(".slidePhoto");
+  var dots = $(".dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
 }
 });
