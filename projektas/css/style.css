@@ -32,12 +32,13 @@ body {
 }
 
 slideshow-container{
-	width: 100%;
+	max-width: 1000px;
 	position: relative;
-	
+	margin: auto;
 }
-.slidePhoto{
-	float: left;
+
+}
+.numberPhoto{
 	position: absolute;
 	width: 100%;
 	height: 100%;
