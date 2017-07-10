@@ -76,6 +76,7 @@ $(document).ready(function(){
     });
 
 	
+	
     $("#prev").click(function(){
         if ($(".info div:visible").prev().length != 0)
             $(".info div:visible").prev().show().next().hide();
