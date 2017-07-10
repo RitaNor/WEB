@@ -29,32 +29,70 @@ changePhoto();*/
 		setTimeout(carousel, 3000);
 	}
 });*/
+$(document).ready(function () {
+		var currentPosition = 0;
+		var slideWidth = 2000;
+		var slides = $('.slidePhoto');
+		var numberOfSlides = slides.length;
+		var slideShowInterval;
+		var speed = 3000;
 
-$(document).ready(function(){
-var slideIndex = 1;
-showSlides(slideIndex);
+		slideShowInterval = setInterval(changePosition, speed);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+		slides.wrapAll('<div id="slidesHolder"></div>');
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+		slides.css({ 'float': 'left' });
 
-function showSlides(n) {
-  var i;
-  var slides = $(".slidePhoto");
-  var dots = $(".dot");
-  if (n > slides.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
-}
+		$('#slidesHolder').css('width', slideWidth * numberOfSlides);
+
+		$('#slideShowWindow')
+		 .prepend('<span class="slideNav" id="leftNav">Move Left</span>')
+		 .append('<span class="slideNav" id="rightNav">Move Right</span>');
+
+			manageNav(currentPosition);
+
+
+			$('.slideNav').bind('click', function () {
+
+			 currentPosition = ($(this).attr('id') === 'rightNav')
+			 ? currentPosition + 1 : currentPosition - 1;
+
+			 manageNav(currentPosition);
+			 clearInterval(slideShowInterval);
+			 slideShowInterval = setInterval(changePosition, speed);
+			 moveSlide();
+			 });
+
+		function manageNav(position) {
+	 
+			 if (position === 0) {
+			 $('#leftNav').hide();
+			 }
+			 else {
+			 $('#leftNav').show();
+			 }
+
+			 if (position === numberOfSlides - 1) {
+			 $('#rightNav').hide();
+			 }
+			 else {
+			 $('#rightNav').show();
+			 }
+		}
+
+		function changePosition() {
+			if (currentPosition === numberOfSlides - 1) {
+			currentPosition = 0;
+			manageNav(currentPosition);
+		} else {
+			currentPosition++;
+			manageNav(currentPosition);
+			}
+			moveSlide();
+		}
+
+		function moveSlide() {
+			$('#slidesHolder').animate({ 'marginLeft': slideWidth * (-currentPosition) });
+		}
+
 });
