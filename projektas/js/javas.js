@@ -21,7 +21,6 @@ $(document).ready(function () {
 
 			manageNav(currentPosition);
 
-
 			$('.slideNav').bind('click', function () {
 
 			 currentPosition = ($(this).attr('id') === 'rightNav')
@@ -70,6 +69,7 @@ $(document).ready(function () {
     });
 
 	
+	
     $("#next").click(function(){
         if ($(".info div:visible").next().length != 0)
             $(".info div:visible").next().show().prev().hide();
@@ -91,12 +91,11 @@ $(document).ready(function () {
         return false;
     });
 	
+	
 	$(".active").on("click", function(){
-			
-		var eventInfo=$(this).children("span").text();
-		$("#7").append(eventInfo);
-		$("#13").append(eventInfo);
-		$("#25").append(eventInfo);
-		$("#29").append(eventInfo);
+		console.log($(this).children("span").text());
+		//$(this).children("span").html();
+		
+		
 	});
 });

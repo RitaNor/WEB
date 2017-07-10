@@ -28,8 +28,6 @@ body {
 	background-color:grey;
 	padding-top:50px;
 	margin-bottom:5px;
-	
-
 }
 
 slideshow-container{
@@ -52,7 +50,7 @@ slideshow-container{
 
 
 
-		.istorija{
+.istorija{
 	background-color: rgb(17, 115, 212);
 	max-width: 1400px;
 	margin: 40px auto 0 auto;
@@ -83,7 +81,6 @@ slideshow-container{
 	flex:1;
 	display:flex;
 	flex-direction: column;
-
 }
 
 
