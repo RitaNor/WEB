@@ -33,6 +33,7 @@ $(document).ready(function () {
 		var currentPosition = 0;
 		var slideWidth = 2000;
 		var slides = $('.slidePhoto');
+		console.log(slides);
 		var numberOfSlides = slides.length;
 		var slideShowInterval;
 		var speed = 3000;
@@ -94,5 +95,30 @@ $(document).ready(function () {
 		function moveSlide() {
 			$('#slidesHolder').animate({ 'marginLeft': slideWidth * (-currentPosition) });
 		}
+	$(".info div").each(function(e) {
+        if (e != 0)
+            $(this).hide();
+    });
 
+	
+    $("#next").click(function(){
+        if ($(".info div:visible").next().length != 0)
+            $(".info div:visible").next().show().prev().hide();
+        else {
+            $(".info div:visible").hide();
+            $(".info div:first").show();
+        }
+        return false;
+    });
+	
+	
+    $("#prev").click(function(){
+        if ($(".info div:visible").prev().length != 0)
+            $(".info div:visible").prev().show().next().hide();
+        else {
+            $(".info div:visible").hide();
+            $(".info div:last").show();
+        }
+        return false;
+    });
 });

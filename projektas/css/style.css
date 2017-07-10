@@ -50,6 +50,81 @@ slideshow-container{
 	position:absolute;
 }
 
+
+		
+		.istorija{
+	background-color: rgb(17, 115, 212);
+	max-width: 1400px;
+	margin: 40px auto 0 auto;
+	line-height:1.65;
+	padding:20px 50px;
+	
+}
+
+@media(min-width: 900px){
+	.istorija{
+	display:flex;
+	justify-content: sapce-between;
+	flex-wrap: wrap;
+	}
+}
+
+.istorija-track{
+	padding:20px;
+	box-sizing: border-box;
+	margin: 20px;
+	flex:2;
+}
+
+
+.istorija-info-container{
+	max-width:100%;
+	margin:0 auto;
+	flex:1;
+	display:flex;
+	flex-direction: column;
+
+}
+
+
+.info-photo{
+	flex:0.5;
+	margin:0 auto;
+}
+
+.info{
+	text-color:white;
+	flex:1;
+	margin:0;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a .round:hover {
+    background-color: yellow;
+    color: black;
+}
+
+#prev {
+    background-color: white;
+    color:rgb(17, 115, 212);
+}
+
+
+
+#next {
+    background-color: white;
+    color: rgb(17, 115, 212);
+}
+
+.round {
+    border-radius: 50%;
+}
+
 .calendar{
 	font-family: Verdana, sans-serif;
 	height:100%;
