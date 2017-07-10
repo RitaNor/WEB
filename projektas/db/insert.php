@@ -24,7 +24,7 @@
 	// set parameters and execute
 	if ($stmt->execute()) { 
 		
-		header('Location: /LAYOUT/asmeninis/index.php');
+		header('Location: /eversion.html');
 	} else {
 	   echo $stmt->error;
 	}

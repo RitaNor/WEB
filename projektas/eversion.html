@@ -195,6 +195,7 @@
 		
 		
 		<section class="calendar">
+		
 			<div class="month"> 
 				<ul>
 					<li class="prev">&#10094;</li>
@@ -223,13 +224,13 @@
 					<li>4</li>
 					<li>5</li>
 					<li>6</li>
-					<li><span class="active">7</span></li>
+					<li><span id="7" class="active">7 <span hidden>Grand-Prix-Strecke</span></span></li>
 					<li>8</li>
 					<li>9</li>
 					<li>10</li>
 					<li>11</li>
 					<li>12</li>
-					<li>13</li>
+					<li><span id="13" class="active">13<span hidden>Grand-Prix-Fahrerlager Nordschleife</span></span></li>
 					<li>14</li>
 					<li>15</li>
 					<li>16</li>
@@ -241,14 +242,14 @@
 					<li>22</li>
 					<li>23</li>
 					<li>24</li>
-					<li>25</li>
+					<li><span id="25" class="active">25<span hidden>ADAC TRUCK GRAND PRIX</span></span></li>
 					<li>26</li>
 					<li>27</li>
 					<li>28</li>
-					<li>29</li>
+					<li><span id="29" class="active">29<span hidden>Nordschleife</span></span></li>
 					<li>30</li>
 					<li>31</li>
-				</ul>
+				</ul>	
 		
 		
 		
@@ -290,20 +291,21 @@
 		
 		<p>Norite prisijungti prie projekto? Palikite trumpą žinutę ir mes su jumis susisieksime.</p> 
 		
-		<div class="w3-col m6">
-				<form action="/insert.php" method="post">
-						<div class="w3-row-padding" style="margin:0 16px 32px 16px">
-							<div class="w3-half">
-							<input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+		<div>
+				<form method="post" action="support/insert.php">
+										<div style="margin:0 16px 32px 16px">
+							<div>
+							<input type="text" placeholder="name" required name="name">
 						</div>
-							<div class="w3-half">
-							<input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+													<div>
+							<input type="text" placeholder="email" required name="email">
 						</div>
 					</div>
-				<input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-				<button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+				<input type="text" placeholder="comment" required name="comment">
+				<button type="submit">SEND</button>
 			</form>
 		</div>
+
 				
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2302.4598614476477!2d25.395159215891972!3d54.75430098029813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd977726e985d9%3A0x5c691a2760d3e110!2sKair%C4%97n%C5%B3+g.+48%2C+Vilnius+10239!5e0!3m2!1slt!2slt!4v1499275492567"
 				width="1200" height="300" frameborder="8" style="border:3" allowfullscreen></iframe>
