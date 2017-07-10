@@ -6,6 +6,7 @@
     width: 100%;
 }
 
+
 .menu a{
 	float: left;
     display: block;
@@ -50,9 +51,15 @@ slideshow-container{
 	position:absolute;
 }
 
+<<<<<<< HEAD
 
 		
 		.istorija{
+=======
+<<<<<<< HEAD
+
+.istorija{
+>>>>>>> 1d7028ee4e0dfb74320e2e7bae39746fcd6839f5
 	background-color: rgb(17, 115, 212);
 	max-width: 1400px;
 	margin: 40px auto 0 auto;
@@ -125,6 +132,11 @@ a .round:hover {
     border-radius: 50%;
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 6ff3e9a6f54903cdf83441012d355c87cffaf70a
+>>>>>>> 1d7028ee4e0dfb74320e2e7bae39746fcd6839f5
 .calendar{
 	font-family: Verdana, sans-serif;
 	height:100%;
